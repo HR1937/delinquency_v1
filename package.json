@@ -1,0 +1,23 @@
+{
+  "name": "delinquency-voice-agent-poc",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "bun run --cwd apps/backend dev",
+    "dev:frontend": "bun run --cwd apps/frontend dev",
+    "dev": "bun run --cwd apps/backend dev",
+    "build": "bun run --cwd packages/contracts build && bun run --cwd apps/backend build && bun run --cwd apps/frontend build",
+    "test": "bun test --parallel=1 apps/backend/tests",
+    "db:generate": "bun run --cwd apps/backend db:generate",
+    "db:push": "bun run --cwd apps/backend db:push",
+    "db:migrate": "bun run --cwd apps/backend db:migrate",
+    "db:seed": "bun run --cwd apps/backend db:seed"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "sourceMap": true,
+    "paths": {
+      "@delinquency/contracts": ["./packages/contracts/src/index.ts"]
+    }
+  },
+  "exclude": ["apps/frontend", "node_modules", "dist"]
+}

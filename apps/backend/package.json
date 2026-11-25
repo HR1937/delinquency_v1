@@ -1,0 +1,28 @@
+{
+  "name": "@delinquency/backend",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:migrate": "bun src/db/run-migration.ts",
+    "db:seed": "bun src/db/seed.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@delinquency/contracts": "workspace:*",
+    "@hono/node-server": "^1.13.8",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "hono": "^4.7.2",
+    "postgres": "^3.4.5",
+    "twilio": "^5.4.3",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.30.4"
+  }
+}
